@@ -1,0 +1,52 @@
+@import url("common.css");
+
+/* ======================================================
+   SCROLLBAR
+   ====================================================== */
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--dark-navy-soft);
+    border-radius: 1rem;
+    border: 0.25rem solid transparent;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--dark-navy);
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        scrollbar-width: none !important;
+        -ms-overflow-style: none !important;
+    }
+}
+
+
+/* ======================================================
+   THEME BUTTON
+   ====================================================== */
+
+.btn-theme-auto {
+    background-color: var(--dark-navy);
+    color: var(--broken-white);
+}
+
+.btn-theme-auto:hover:not(.nav-link.active) {
+    background-color: var(--gold);
+    color: var(--dark-navy);
+}
+
+
+/* ======================================================
+   LOGOUT (DANGER ACTION)
+   ====================================================== */
+
+.logout:hover {
+    background-color: #8B1E1E !important;
+    color: var(--broken-white) !important;
+}

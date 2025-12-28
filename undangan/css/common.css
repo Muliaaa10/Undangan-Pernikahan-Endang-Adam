@@ -1,0 +1,159 @@
+/* ======================================================
+   1. COLOR SYSTEM (SOURCE OF TRUTH)
+   ====================================================== */
+
+:root {
+    /* Base Palette */
+    --broken-white: #F5F3EE;
+    --dark-navy: #0F1A2B;
+    --gold: #C9A24D;
+
+    /* Variants */
+    --dark-navy-soft: rgba(15, 26, 43, 0.85);
+    --dark-navy-overlay: rgba(15, 26, 43, 0.55);
+
+    --gold-soft: rgba(201, 162, 77, 0.85);
+}
+
+
+/* ======================================================
+   2. BOOTSTRAP THEME OVERRIDE
+   ====================================================== */
+
+html[data-bs-theme="light"] {
+    --bs-body-bg: var(--broken-white);
+    --bs-body-color: var(--dark-navy);
+
+    --bs-light: var(--broken-white);
+    --bs-dark: var(--dark-navy);
+
+    --bs-primary: var(--gold);
+    --bs-primary-rgb: 201,162,77;
+}
+
+html[data-bs-theme="dark"] {
+    --bs-body-bg: var(--dark-navy);
+    --bs-body-color: var(--broken-white);
+
+    --bs-light: var(--broken-white);
+    --bs-dark: var(--dark-navy);
+
+    --bs-primary: var(--gold);
+    --bs-primary-rgb: 201,162,77;
+}
+
+
+/* ======================================================
+   3. GLOBAL BEHAVIOR & RESET
+   ====================================================== */
+
+html {
+    scroll-behavior: smooth !important;
+    width: 100vw !important;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif !important;
+    padding: 0 !important;
+    width: 100% !important;
+    overflow-x: hidden !important;
+}
+
+i {
+    width: auto !important;
+}
+
+
+/* ======================================================
+   4. SMOOTH THEME TRANSITION
+   ====================================================== */
+
+body,
+div,
+nav,
+section,
+svg {
+    will-change: background-color;
+    transition: background-color 350ms ease;
+}
+
+svg > path {
+    will-change: color;
+    transition: color 350ms ease;
+}
+
+
+/* ======================================================
+   5. NAVBAR & SURFACE
+   ====================================================== */
+
+.navbar {
+    background-color: var(--dark-navy-soft) !important;
+    backdrop-filter: blur(0.5rem);
+}
+
+.bg-theme-auto {
+    background-color: var(--dark-navy);
+}
+
+
+/* ======================================================
+   6. TEXT & COLOR UTILITIES
+   ====================================================== */
+
+.text-theme-auto {
+    color: var(--broken-white);
+}
+
+.text-gold {
+    color: var(--gold) !important;
+}
+
+.text-gold-soft {
+    color: var(--gold-soft) !important;
+}
+
+
+/* ======================================================
+   7. BUTTON REFINEMENT
+   ====================================================== */
+
+.btn-outline-auto {
+    --bs-btn-color: var(--gold);
+    --bs-btn-border-color: var(--gold);
+
+    --bs-btn-hover-color: var(--dark-navy);
+    --bs-btn-hover-bg: var(--gold);
+    --bs-btn-hover-border-color: var(--gold);
+
+    --bs-btn-active-bg: var(--gold);
+    --bs-btn-active-border-color: var(--gold);
+}
+
+
+/* ======================================================
+   8. OVERLAY & GLASS EFFECT
+   ====================================================== */
+
+.bg-overlay-auto {
+    background-color: var(--dark-navy-overlay);
+    backdrop-filter: blur(0.3rem);
+}
+
+
+/* ======================================================
+   9. HOVER & HELPER
+   ====================================================== */
+
+.hover-area {
+    display: none;
+    cursor: pointer;
+}
+
+.hover-wrapper:hover .hover-area {
+    display: flex;
+}
+
+.gif-image {
+    max-height: 10rem;
+}
